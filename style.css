@@ -154,3 +154,11 @@ footer nav a:hover { color: var(--plum); }
 .project .more { display: inline-block; margin-top: 1rem; color: var(--plum); font-weight: 500; }
 @media (max-width: 560px) { .project .pair { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { .project, .project:hover { transition: none; transform: none; } }
+
+/* Feinschliff Mobil */
+.numbers strong, .project .stats strong { font-variant-numeric: lining-nums; }
+footer nav a { display: inline-block; padding: 0.7rem 0; }
+.project picture { display: block; }
+@media (max-width: 560px) {
+  .project img { max-height: 26rem; object-fit: cover; object-position: top; }
+}
