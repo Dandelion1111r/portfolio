@@ -1,0 +1,122 @@
+@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/cormorant-garamond-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 600; font-display: swap; src: url("fonts/cormorant-garamond-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Cormorant Garamond"; font-style: italic; font-weight: 500; font-display: swap; src: url("fonts/cormorant-garamond-latin-500-italic.woff2") format("woff2"); }
+@font-face { font-family: Poppins; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/poppins-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: Poppins; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/poppins-latin-500-normal.woff2") format("woff2"); }
+
+:root {
+  --paper: #fbf7f4;
+  --ink: #2b2230;
+  --ink-soft: #5e5560;
+  --line: #e6dcd8;
+  --plum: #8e44ad;
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --sans: Poppins, system-ui, -apple-system, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #1f1a22;
+    --ink: #f3ecf0;
+    --ink-soft: #b9adb6;
+    --line: #3d3440;
+    --plum: #c48ae0;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; margin: 0; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 1rem/1.7 var(--sans);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  width: min(100% - 3rem, 46rem);
+  margin: auto;
+  padding: 5rem 0 3rem;
+}
+h1 {
+  font: 500 clamp(2.6rem, 7vw, 4.2rem)/1.05 var(--serif);
+  letter-spacing: -0.01em;
+}
+.lead {
+  margin-top: 1.5rem;
+  max-width: 34rem;
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+}
+/* Der Weg: Schaltkreise → Server → Interfaces */
+.path {
+  list-style: none;
+  padding: 0;
+  margin: 3.5rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line);
+}
+.path li {
+  padding: 1.25rem 1rem 0 0;
+  position: relative;
+}
+.path li::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 1.5px solid var(--ink-soft);
+}
+.path li:last-child::before { background: var(--plum); border-color: var(--plum); }
+.path strong {
+  display: block;
+  font: 600 1.35rem/1.2 var(--serif);
+}
+.path span { font-size: 0.85rem; color: var(--ink-soft); }
+.note {
+  font: italic 500 1.4rem/1.4 var(--serif);
+  color: var(--plum);
+}
+.status { margin-top: 0.75rem; color: var(--ink-soft); }
+nav { margin-top: 2.5rem; display: flex; flex-wrap: wrap; gap: 0.75rem 1.75rem; }
+nav a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 2px;
+}
+nav a:hover { border-color: var(--plum); color: var(--plum); }
+a:focus-visible { outline: 2px solid var(--plum); outline-offset: 4px; border-radius: 2px; }
+footer {
+  width: min(100% - 3rem, 46rem);
+  margin: 0 auto;
+  padding: 2rem 0;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+@media (max-width: 560px) {
+  .path { grid-template-columns: 1fr; border-top: 0; border-left: 1px solid var(--line); }
+  .path li { padding: 0 0 1.5rem 1.5rem; }
+  .path li::before { top: 0.45rem; left: -5px; }
+}
+
+/* Footer & Rechtliches */
+footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 1.5rem; }
+footer nav { margin: 0; gap: 0 1.25rem; }
+footer nav a { color: var(--ink-soft); border: 0; padding: 0; }
+footer nav a:hover { color: var(--plum); }
+.legal { margin: 0 auto; }
+.legal h1 { font-size: clamp(2.2rem, 6vw, 3.2rem); }
+.legal h2 { font: 600 1.45rem/1.3 var(--serif); margin: 2.25rem 0 0.5rem; }
+.legal p, .legal ul { margin-top: 0.6rem; color: var(--ink-soft); }
+.legal ul { padding-left: 1.2rem; }
+.legal strong { color: var(--ink); font-weight: 500; }
+.legal a { color: var(--ink); text-decoration-color: var(--line); text-underline-offset: 3px; }
+.legal a:hover { color: var(--plum); text-decoration-color: var(--plum); }
+.back { display: inline-block; margin-bottom: 2.5rem; font-size: 0.9rem; }
+.stand { margin-top: 2.5rem; font-size: 0.85rem; }
