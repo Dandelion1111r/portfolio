@@ -6,6 +6,16 @@
 <title>Dandelion 11:11 – Fallstudie – Raluca Jidvian</title>
 <meta name="description" content="Fallstudie: Ein Online-Shop mit Live-Konfigurator für personalisierte Ballongeschenke, von der Idee bis zur Bestellung selbst gestaltet und gebaut.">
 <link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="Dandelion 11:11 – Fallstudie – Raluca Jidvian">
+<meta property="og:description" content="Fallstudie: Ein Online-Shop mit Live-Konfigurator für personalisierte Ballongeschenke, von der Idee bis zur Bestellung selbst gestaltet und gebaut.">
+<meta property="og:url" content="https://www.ralucajidvian.de/dandelion.html">
+<meta property="og:image" content="https://www.ralucajidvian.de/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
 <main class="legal case">
@@ -29,6 +39,14 @@
     <div><strong>2</strong><span>Sprachen: Deutsch und Rumänisch</span></div>
   </div>
 
+  <section class="summary" aria-labelledby="blick">
+    <h2 id="blick">Auf einen Blick</h2>
+    <p><b>Problem</b>Bestellungen liefen über Social Media und Nachrichten. Wie man bestellt und bezahlt, war für Interessierte nicht klar.</p>
+    <p><b>Lösung</b>Ein eigener Shop mit Live-Vorschau, einem Konfigurator in vier Schritten, Bezahlung per PayPal oder Karte und einer Bestellverwaltung.</p>
+    <p><b>Meine Rolle</b>Alles: Konzept, UX/UI, Frontend, Texte und Inhalte, mit KI-Unterstützung beim Code.</p>
+    <p><b>Ergebnis</b>Der Shop ist seit Juni 2026 live. Bestellungen kommen mit allen Angaben aus dem Konfigurator vollständig an.</p>
+  </section>
+
   <h2>Ausgangslage</h2>
   <p>Angefangen hat Dandelion 11:11 auf Facebook und Instagram, später kamen ein TikTok Shop und eine Linktree-Seite dazu. Die Ballons kamen gut an, aber das Bestellen war mühsam: Absprachen liefen über Nachrichten, und für Interessierte war nicht klar sichtbar, <strong>wie</strong> sie eigentlich bestellen und bezahlen können.</p>
   <p>Das Ziel war deshalb ein eigener Shop, in dem der Weg vom ersten Gedanken bis zur bezahlten Bestellung an einem Ort liegt und für jeden sofort verständlich ist.</p>
@@ -41,11 +59,18 @@
   </figure>
 
   <h2>Vier kurze Schritte statt eines langen Formulars</h2>
+  <p>Die erste Version vom Juni 2026 zeigte alle Optionen untereinander: Text, Füllung und Design, Grußkarte, Menge und darunter zwei gleich große Bestell-Buttons. Wer gestalten wollte, musste weit scrollen und verlor die Vorschau aus dem Blick, und am Ende war nicht klar, welcher Button der richtige ist.</p>
+  <div class="compare">
+    <figure>
+      <a href="img/dandelion-vorher.webp" class="zoom"><img src="img/dandelion-vorher.webp" alt="Erste Version des Konfigurators vom Juni 2026: alle Optionen in vier Karten untereinander, darunter die Buttons In den Warenkorb und Jetzt über WhatsApp bestellen in gleicher Größe." width="1600" height="1878" loading="lazy"></a>
+      <figcaption><strong>Vorher (Juni 2026):</strong> ein langes Formular, zwei gleich starke Bestellwege.</figcaption>
+    </figure>
+    <figure>
+      <a href="img/dandelion-schritt1.webp" class="zoom"><img src="img/dandelion-schritt1.webp" alt="Heutige Version: Schritt 1 von 4 mit Fortschrittsleiste, nur dem Textfeld, den Schriftfarben, der Schriftgröße und einem Weiter-Button." width="1000" height="918" loading="lazy"></a>
+      <figcaption><strong>Nachher:</strong> vier Schritte, immer nur das, was gerade wichtig ist.</figcaption>
+    </figure>
+  </div>
   <p>Über ein Dutzend Optionen auf einer Seite hätten erschlagen. Der Konfigurator teilt sie in <strong>Text → Design → Füllung → Bestellen</strong>. Eine Fortschrittsleiste und „Schritt 2 von 4“ zeigen jederzeit, wie weit es noch ist, und „Zurück“ führt ohne Datenverlust zum vorherigen Schritt.</p>
-  <figure>
-    <a href="img/dandelion-schritt1.webp" class="zoom"><img src="img/dandelion-schritt1.webp" alt="Schritt 1 von 4 des Konfigurators: Eingabefeld für den Ballontext mit maximal 50 Zeichen, Farbfelder für die Schrift, Regler für die Schriftgröße und optionaler Bild-Upload." width="1000" height="918" loading="lazy"></a>
-    <figcaption>Schritt 1: Nur das, was jetzt wichtig ist, nämlich der Text.</figcaption>
-  </figure>
 
   <h2>Aufpreise stehen direkt an der Option, nicht erst im Warenkorb</h2>
   <p>Jeder Ballontyp zeigt seinen Aufpreis direkt in der Auswahl, zum Beispiel „Herz-Ballon (+3,00&nbsp;€)“ oder „Bubble-Ballon (+9,00&nbsp;€)“. Versandkosten und die Grenze für kostenlosen Versand sind klar benannt. So gibt es am Ende keine Überraschung.</p>
@@ -59,6 +84,9 @@
 
   <h2>Eigene Seiten pro Anlass, damit man den Shop über Google findet</h2>
   <p>Menschen suchen nicht nach „Ballon“, sondern nach „Geschenk zur Einschulung“ oder „Ballon zur Hochzeit“. Deshalb gibt es eigene Seiten für Geburtstag, Hochzeit, Babyparty, Einschulung, Jugendweihe, JGA und Valentinstag, dazu ein Journal mit Geschichten aus dem Atelier.</p>
+
+  <h2>Barrierefreiheit gehört zur Qualität, nicht ans Ende</h2>
+  <p>Nach Audits mit PageSpeed und auf echten Mobilgeräten habe ich die Überschriften-Hierarchie korrigiert, zu schwache Farbkontraste verstärkt, Social-Media-Icons mit Beschriftungen für Screenreader versehen, dekorative Bilder für Screenreader ausgeblendet und Touch-Flächen vergrößert.</p>
 
   <h2>Mit KI gebaut, von mir entschieden</h2>
   <p>Den Code habe ich mit Unterstützung von Claude geschrieben. Die Entscheidungen, also was der Konfigurator zeigt, in welcher Reihenfolge und mit welchen Worten, habe ich getroffen, getestet und immer wieder angepasst.</p>

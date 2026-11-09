@@ -6,6 +6,16 @@
 <title>SKIN AI – Fallstudie – Raluca Jidvian</title>
 <meta name="description" content="Fallstudie: Konzept und interaktiver Prototyp einer Skincare-App mit Hauttest, Gesichtskarte und Wirkstoff-Lexikon, auf Deutsch und Rumänisch.">
 <link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="SKIN AI – Fallstudie – Raluca Jidvian">
+<meta property="og:description" content="Fallstudie: Konzept und interaktiver Prototyp einer Skincare-App mit Hauttest, Gesichtskarte und Wirkstoff-Lexikon, auf Deutsch und Rumänisch.">
+<meta property="og:url" content="https://www.ralucajidvian.de/skin-ai.html">
+<meta property="og:image" content="https://www.ralucajidvian.de/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
 <main class="legal case">
@@ -30,6 +40,14 @@
   </div>
 
   <p class="mock-note">SKIN AI ist ein eigenes Konzept, keine veröffentlichte App. Der Prototyp speichert nichts außerhalb des Browsers. Alle Produkte und Profile darin sind Beispiele.</p>
+
+  <section class="summary" aria-labelledby="blick">
+    <h2 id="blick">Auf einen Blick</h2>
+    <p><b>Problem</b>Hautpflege wird oft nach Werbung gekauft, ohne zu wissen, ob sie zur eigenen Haut passt.</p>
+    <p><b>Lösung</b>Ein zweisprachiger, interaktiver Prototyp mit Hauttest, Gesichtskarte, Wirkstoff-Lexikon und Kombi-Check.</p>
+    <p><b>Meine Rolle</b>Konzept, UX, UI-Design, Texte und Frontend, mit KI-Unterstützung beim Code.</p>
+    <p><b>Ergebnis</b>Ein funktionierender Prototyp als Grundlage für die App. Noch nicht mit Nutzerinnen getestet.</p>
+  </section>
 
   <h2>Ausgangslage</h2>
   <p>Viele kaufen Hautpflege nach Werbung oder Empfehlungen und wissen nicht, ob sie zur eigenen Haut passt. Typische Fragen bleiben offen: Welcher Hauttyp bin ich? Welche Wirkstoffe helfen bei meinem Problem? Wo trage ich ein Produkt auf? Darf ich zwei Wirkstoffe zusammen verwenden?</p>
@@ -76,6 +94,9 @@
     <a href="img/skinai-app.webp" class="zoom"><img src="img/skinai-app.webp" alt="Drei App-Screens im Entwurf: Heute mit Morgenroutine und Wochenübersicht, eine Produktseite mit Wirkstoffen und gekennzeichnetem Werbelink, und Meine Haut mit Profil und Fortschrittsgrafik." width="1600" height="939" loading="lazy"></a>
     <figcaption>Erste App-Screens: Heute, Produktseite und Meine Haut. Alle Inhalte sind Beispiele.</figcaption>
   </figure>
+
+  <h2>Barrierefreiheit von Anfang an mitgedacht</h2>
+  <p>Alle Funktionen lassen sich mit der Tastatur bedienen, der Fokus ist immer sichtbar. Gewählte Optionen melden ihren Zustand an Screenreader, und das Testergebnis wird angesagt, sobald es erscheint. Beim Sprachwechsel ändert sich auch die Sprachangabe der Seite, damit Vorlesefunktionen richtig aussprechen. Animationen werden reduziert, wenn das Gerät es so eingestellt hat, und es gibt einen Dark Mode.</p>
 
   <h2>Mit KI gebaut, von mir entschieden</h2>
   <p>Den Code habe ich mit Unterstützung von Claude geschrieben. Konzept, Struktur, Texte, Design und die Regeln hinter Test und Kombi-Check kamen von mir und sind in acht Runden aus Feedback entstanden.</p>
