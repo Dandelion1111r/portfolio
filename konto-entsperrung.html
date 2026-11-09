@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gesperrte Konten – Fallstudie – Raluca Jidvian</title>
+<meta name="description" content="Fallstudie: Eine Automatisierung, die gesperrte Benutzerkonten schnell wieder freigibt, ohne die Sicherheit aus der Hand zu geben.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="legal case">
+  <a class="back" href="./">← Zurück zur Startseite</a>
+
+  <p class="eyebrow">Fallstudie · IT-Automatisierung · Service Design</p>
+  <h1>Gesperrte Konten: Hilfe, bevor jemand anrufen muss</h1>
+  <p class="lead">Wer sich ein paarmal vertippt, ist plötzlich aus dem eigenen Rechner ausgesperrt und wartet auf die IT. Ich habe eine Automatisierung gebaut, die versehentliche Sperren schnell aufhebt und auffällige Fälle trotzdem bei der IT lässt.</p>
+
+  <dl class="facts">
+    <div><dt>Rolle</dt><dd>Analyse, Konzept, Umsetzung</dd></div>
+    <div><dt>Zeitraum</dt><dd>2026</dd></div>
+    <div><dt>Technik</dt><dd>PowerShell, Active Directory, Monitoring</dd></div>
+    <div><dt>Status</dt><dd>Im Einsatz</dd></div>
+  </dl>
+
+  <div class="numbers">
+    <div><strong>0</strong><span>Änderungen am bestehenden Monitoring</span></div>
+    <div><strong>1</strong><span>neue Ansicht, in der die IT alles sieht</span></div>
+  </div>
+
+  <p class="mock-note">Diese Fallstudie beschreibt das Prinzip. Interne Systemnamen, Schwellenwerte und Konten sind bewusst weggelassen oder erfunden.</p>
+
+  <h2>Ausgangslage: Ein Tippfehler kostet mehr Zeit als nötig</h2>
+  <p>Konten sperren sich nach mehreren falschen Passwörtern automatisch. Das ist richtig so, denn es schützt vor Angriffen. Im Alltag trifft es aber fast immer Kolleginnen, die sich nur vertippt haben, etwa nach einer Passwortänderung oder weil ein altes Passwort noch auf dem Handy gespeichert ist.</p>
+  <p>Für sie heißt das: Arbeit unterbrochen, IT anrufen, warten. Für die IT heißt es: immer wieder dieselbe Anfrage. Beide Seiten verlieren Zeit für ein Problem, das eigentlich keines ist.</p>
+  <p>Das Ziel war deshalb, versehentliche Sperren ohne Wartezeit aufzulösen, ohne den Schutz vor echten Angriffen aufzugeben.</p>
+
+  <h2>Die eigentliche Designfrage: Wem helfe ich, und wen halte ich auf?</h2>
+  <p>Alle Sperren automatisch aufzuheben wäre bequem, aber unsicher. Gar nichts zu ändern wäre sicher, aber frustrierend. Die Lösung liegt dazwischen: Gelegentliche Sperren werden automatisch aufgehoben, weil sie fast immer harmlos sind. Wiederholt sich eine Sperre auffällig, bleibt das Konto gesperrt, und die IT schaut es sich an.</p>
+  <div class="mock" role="img" aria-label="Beispielansicht: Tagesverlauf für ein erfundenes Konto. Gelegentliche Sperren werden automatisch aufgehoben, eine wiederholte Sperre bleibt bestehen und geht an die IT.">
+    <div class="mock-head"><b>Konto „m.muster“ · Beispieltag</b><span>erfundene Daten</span></div>
+    <ol class="timeline">
+      <li><time>08:12</time><span>Konto gesperrt <span class="tag ok">automatisch entsperrt</span></span></li>
+      <li><time>10:47</time><span>Konto erneut gesperrt <span class="tag ok">automatisch entsperrt</span></span></li>
+      <li><time>14:03</time><span>Sperre wiederholt sich <span class="tag hold">bleibt gesperrt, IT prüft</span></span></li>
+    </ol>
+  </div>
+
+  <h2>Nur aktive Konten, damit nichts Altes wieder aufwacht</h2>
+  <p>Die Automatisierung berücksichtigt ausschließlich aktive Benutzerkonten. Deaktivierte Konten, zum Beispiel von ehemaligen Mitarbeitenden, bleiben unberührt. Eine Regel, die man leicht übersieht und die genau deshalb von Anfang an fest eingebaut ist.</p>
+
+  <h2>Sichtbar für die IT, ohne das Bestehende anzufassen</h2>
+  <p>Eine Automatisierung, die im Hintergrund unsichtbar arbeitet, schafft kein Vertrauen. Deshalb gibt es im Monitoring eine eigene neue Ansicht, die zeigt, wie viele Konten heute automatisch entsperrt wurden und welche zur Prüfung offen sind. Die bisherige Überwachung der gesperrten Konten habe ich bewusst nicht verändert, damit sich für das Team nichts Gewohntes verschiebt.</p>
+  <figure>
+    <a href="img/ad-monitoring.webp" class="zoom"><img src="img/ad-monitoring.webp" alt="Beispielansicht im Monitoring: eine neue Ansicht „AD-Sperren Auto-Unlock“ neben der unveränderten Ansicht „Gesperrte AD-Konten“. Kacheln zeigen vier automatisch entsperrte Konten und eines zur Prüfung, darunter ein Protokoll mit erfundenen Konten und der jeweiligen Entscheidung." width="1600" height="620" loading="lazy"></a>
+    <figcaption>Die neue Ansicht im Monitoring mit Protokoll: Jede Entscheidung ist nachvollziehbar. Alle Konten sind erfunden.</figcaption>
+  </figure>
+
+  <h2>Nachvollziehbar statt magisch</h2>
+  <p>Jede automatische Entsperrung wird protokolliert: wann, welches Konto, welche Entscheidung. Die Kommentare im Skript sind auf Deutsch, damit auch Kolleginnen ohne Programmierhintergrund verstehen, was passiert und warum.</p>
+
+  <h2>Mit KI gebaut, von mir entschieden</h2>
+  <p>Das Skript habe ich mit Unterstützung von Claude geschrieben. Die Idee, die Regeln, also was automatisch passiert und was bewusst bei der IT bleibt, sowie das Testen im echten Betrieb kamen von mir.</p>
+
+  <h2>Was ich gelernt habe</h2>
+  <ul>
+    <li><strong>Auch Infrastruktur hat eine Nutzererfahrung.</strong> Niemand sieht das Skript, aber alle merken, ob sie nach einem Tippfehler weiterarbeiten können oder warten müssen.</li>
+    <li><strong>Gute Automatisierung weiß, wann sie aufhört.</strong> Die wichtigste Entscheidung war nicht, was automatisch passiert, sondern was bewusst beim Menschen bleibt.</li>
+    <li><strong>Vertrauen entsteht durch Sichtbarkeit.</strong> Erst die eigene Monitoring-Ansicht und das Protokoll haben die Automatisierung für das Team wirklich nutzbar gemacht.</li>
+  </ul>
+
+  <h2>Lust auf mehr?</h2>
+  <p>Ich freue mich über Fragen zu diesem Projekt oder ein Gespräch über eine Stelle im Bereich UX/UI und Frontend.</p>
+  <nav aria-label="Kontakt">
+    <a href="https://www.linkedin.com/in/ralucajidvian">LinkedIn</a>
+    <a href="mailto:jidvian.raluca@yahoo.com">E-Mail schreiben</a>
+    <a href="./">Alle Projekte</a>
+  </nav>
+</main>
+<footer>
+  <span>© 2026 Raluca Jidvian · Bayern</span>
+  <nav aria-label="Footer"><a href="https://www.linkedin.com/in/ralucajidvian">LinkedIn</a><a href="https://github.com/Dandelion1111r">GitHub</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></nav>
+</footer>
+</body>
+</html>

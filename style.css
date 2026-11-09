@@ -162,3 +162,41 @@ footer nav a { display: inline-block; padding: 0.7rem 0; }
 @media (max-width: 560px) {
   .project img { max-height: 26rem; object-fit: cover; object-position: top; }
 }
+
+/* Beispiel-Ansichten (Mockups mit erfundenen Daten) */
+.mock { margin: 2rem 0; border: 1px solid var(--line); border-radius: 12px; padding: 1.1rem 1.2rem 1.2rem; font-size: 0.85rem; overflow-x: auto; }
+.mock-head { display: flex; justify-content: space-between; gap: 1rem; align-items: baseline; margin-bottom: 0.9rem; }
+.mock-head b { font-weight: 500; }
+.mock-head span { font-size: 0.75rem; color: var(--ink-soft); }
+.mock table { border-collapse: collapse; width: 100%; min-width: 30rem; }
+.mock th, .mock td { padding: 0.45rem 0.4rem; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
+.mock th { font-weight: 500; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); }
+.mock td small { display: block; color: var(--ink-soft); font-size: 0.75rem; }
+.bar { display: block; height: 0.9rem; border-radius: 4px; }
+.c1 { background: #b9d7f0; } .c2 { background: #f3c6a8; } .c3 { background: #c9e4c5; }
+.off { display: block; font-size: 0.7rem; color: var(--ink-soft); text-align: center; border: 1px dashed var(--line); border-radius: 4px; }
+.dot { display: inline-block; width: 0.6rem; height: 0.6rem; border-radius: 50%; margin-right: 0.4rem; vertical-align: middle; }
+.checklist { list-style: none; padding: 0; display: grid; gap: 0.4rem; }
+.checklist li::before { content: "☐"; margin-right: 0.5rem; color: var(--ink-soft); }
+.checklist li.done::before { content: "☑"; color: var(--plum); }
+.checklist li.done { color: var(--ink-soft); text-decoration: line-through; text-decoration-color: var(--line); }
+.timeline { list-style: none; padding: 0; display: grid; gap: 0.7rem; }
+.timeline li { display: grid; grid-template-columns: 3.4rem 1fr; gap: 0.75rem; align-items: start; }
+.timeline time { font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+.tag { display: inline-block; font-size: 0.72rem; padding: 0.1rem 0.5rem; border-radius: 999px; border: 1px solid var(--line); margin-left: 0.35rem; }
+.tag.ok { border-color: #6aa86a; color: #3f7d3f; }
+.tag.hold { border-color: var(--plum); color: var(--plum); }
+@media (prefers-color-scheme: dark) {
+  .c1 { background: #3d5a73; } .c2 { background: #7a5440; } .c3 { background: #4a6a46; }
+  .tag.ok { border-color: #8cc48c; color: #a8d8a8; }
+}
+.mock-note { margin-top: 0.8rem; font-size: 0.75rem; color: var(--ink-soft); }
+
+/* Einheitlich für alle Fallstudien */
+.project + .project { margin-top: 1.25rem; }
+.case .zoom { display: block; cursor: zoom-in; }
+.case h2 + nav, .case p + nav { margin-top: 1rem; }
+@media (max-width: 560px) {
+  .project img { object-position: left top; }
+  .case figure { margin-inline: -0.5rem; }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Praktikantenplanung – Fallstudie – Raluca Jidvian</title>
+<meta name="description" content="Fallstudie: Ein internes Planungstool, das Praktikumszeiträume, Abteilungen, Notebooks und das IT-Onboarding an einem Ort zusammenführt.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="legal case">
+  <a class="back" href="./">← Zurück zur Startseite</a>
+
+  <p class="eyebrow">Fallstudie · Internes Tool · UX & Frontend</p>
+  <h1>Praktikantenplanung: Alles für den ersten Tag an einem Ort</h1>
+  <p class="lead">Ein internes Planungstool für eine IT-Abteilung. Es zeigt auf einen Blick, wer wann im Haus ist, in welcher Abteilung, mit welchem Notebook, und was die IT vor dem ersten Tag noch vorbereiten muss.</p>
+
+  <dl class="facts">
+    <div><dt>Rolle</dt><dd>Konzept, UX, Frontend</dd></div>
+    <div><dt>Zeitraum</dt><dd>2026</dd></div>
+    <div><dt>Technik</dt><dd>HTML, CSS, JavaScript, Excel-Import/-Export</dd></div>
+    <div><dt>Status</dt><dd>Intern im Einsatz</dd></div>
+  </dl>
+
+  <div class="numbers">
+    <div><strong>4</strong><span>Angaben pro Person auf einen Blick</span></div>
+    <div><strong>1</strong><span>Ort statt verteilter Listen und E-Mails</span></div>
+    <div><strong>0</strong><span>Feiertage von Hand eintragen</span></div>
+  </div>
+
+  <p class="mock-note">Aus Datenschutzgründen zeigt diese Fallstudie keine echten Daten. Alle Namen, Abteilungen und Geräte in den Beispielansichten sind erfunden.</p>
+
+  <h2>Ausgangslage</h2>
+  <p>Praktikantinnen und Praktikanten kommen das ganze Jahr über, in verschiedene Abteilungen und für unterschiedlich lange Zeiträume. Für die IT heißt jeder Start: ein Konto anlegen, das richtige Postfach zuordnen, ein Notebook vorbereiten und am letzten Tag alles wieder einsammeln.</p>
+  <p>Die Informationen dafür lagen verteilt in Listen und E-Mails. Wer wissen wollte, ob nächste Woche noch ein Notebook frei ist, musste mehrere Quellen zusammensuchen. Genau dort entstehen Fehler: ein vergessenes Postfach, ein doppelt vergebenes Gerät, ein Start an einem Feiertag.</p>
+  <p>Das Ziel war deshalb ein Tool, in dem alles, was die IT für einen Praktikumsstart braucht, an einem Ort liegt und auf einen Blick verständlich ist.</p>
+
+  <h2>Die Zeitleiste beantwortet zuerst die wichtigste Frage: Wer ist wann da?</h2>
+  <p>Im Mittelpunkt steht eine Wochenansicht. Jede Person hat eine eigene Farbe, die überall im Tool gleich bleibt, damit man sie in jeder Ansicht sofort wiedererkennt. Feiertage werden automatisch erkannt und grau markiert, statt dass jemand sie von Hand eintragen muss.</p>
+  <figure>
+    <a href="img/praktikantenplan-uebersicht.webp" class="zoom"><img src="img/praktikantenplan-uebersicht.webp" alt="Beispielansicht des Praktikantenplans: links vier erfundene Praktikant:innen mit Abteilung, Postfach und Notebook, rechts ein Zeitplan für Mai und Juni 2026 mit farbigen Balken pro Person. Pfingstmontag und Fronleichnam sind automatisch als Feiertage markiert und unterbrechen die Balken." width="1600" height="660" loading="lazy"></a>
+    <figcaption>Die Übersicht: wer wann im Haus ist, Feiertage in Bayern werden automatisch ausgespart. Alle Daten sind Beispiele.</figcaption>
+  </figure>
+
+  <h2>Abteilung ausgewählt, Postfach schon zugeordnet</h2>
+  <p>Jede Abteilung ist im Tool mit ihrem passenden Postfach verknüpft. Wer eine Person einer Abteilung zuordnet, muss das Postfach nicht mehr nachschlagen. Das klingt klein, nimmt aber genau die Art von Detailfrage weg, die man sonst jedes Mal neu klären muss.</p>
+
+  <h2>Notebooks sind Teil der Planung, nicht eine zweite Liste</h2>
+  <p>Die Geräte sind direkt im Tool hinterlegt. Bei der Planung sieht man sofort, welches Notebook im gewünschten Zeitraum frei ist und welches schon vergeben ist. So kann ein Gerät nicht versehentlich zweimal verplant werden.</p>
+
+  <h2>Eine Checkliste pro Person, damit am ersten Tag nichts fehlt</h2>
+  <p>Für jede Person gibt es eine IT-Onboarding-Checkliste. Sie macht sichtbar, was schon erledigt ist und was noch offen ist, auch wenn jemand anderes aus dem Team weiterarbeitet.</p>
+  <figure>
+    <a href="img/praktikantenplan-onboarding.webp" class="zoom"><img src="img/praktikantenplan-onboarding.webp" alt="Beispielansicht: IT-Onboarding-Checkliste für eine erfundene Praktikantin mit zwei erledigten und zwei offenen Aufgaben, darunter eine Notebook-Übersicht mit vier vergebenen und einem freien Gerät." width="1000" height="748" loading="lazy"></a>
+    <figcaption>Checkliste pro Person und Notebook-Vergabe im selben Zeitraum. Alle Daten sind Beispiele.</figcaption>
+  </figure>
+
+  <h2>Excel bleibt erlaubt, weil Kolleginnen damit arbeiten</h2>
+  <p>Viele im Haus planen gewohnt in Excel. Statt das zu verbieten, kann das Tool Daten aus Excel übernehmen und wieder als Excel ausgeben. So muss niemand seine Arbeitsweise ändern, um vom Tool zu profitieren.</p>
+
+  <h2>Mit KI gebaut, von mir entschieden</h2>
+  <p>Den Code habe ich mit Unterstützung von Claude geschrieben. Die Idee, das Konzept, das Design und die Tests kamen von mir: was das Tool zeigen muss, in welcher Reihenfolge und welche Funktionen die IT im Alltag wirklich braucht.</p>
+
+  <h2>Was ich gelernt habe</h2>
+  <ul>
+    <li><strong>Ein internes Tool hat echte Nutzerinnen.</strong> Ich habe es für Kolleginnen gebaut, die ich jeden Tag sehe. Ihr Feedback kam direkt, und jede Funktion ist aus einer konkreten Frage im Alltag entstanden.</li>
+    <li><strong>Gute Planung nimmt Nachschlagen weg.</strong> Die wertvollsten Funktionen waren nicht die auffälligsten, sondern die, bei denen man etwas nicht mehr suchen muss: das Postfach zur Abteilung, das freie Notebook, der Feiertag.</li>
+    <li><strong>Farbe muss mehr als schön sein.</strong> Die Farben der Personen mussten auch nebeneinander klar unterscheidbar bleiben. Deshalb steht neben jeder Farbe immer auch der Name.</li>
+    <li><strong>Daten nur einmal eingeben.</strong> Heute würde ich das Tool direkt an das Active Directory bzw. die Cloud-Verwaltung anbinden, damit Namen, Abteilungen und Konten automatisch übernommen werden, statt sie im Tool noch einmal einzutragen.</li>
+  </ul>
+
+  <h2>Lust auf mehr?</h2>
+  <p>Ich freue mich über Fragen zu diesem Projekt oder ein Gespräch über eine Stelle im Bereich UX/UI und Frontend.</p>
+  <nav aria-label="Kontakt">
+    <a href="https://www.linkedin.com/in/ralucajidvian">LinkedIn</a>
+    <a href="mailto:jidvian.raluca@yahoo.com">E-Mail schreiben</a>
+    <a href="./">Alle Projekte</a>
+  </nav>
+</main>
+<footer>
+  <span>© 2026 Raluca Jidvian · Bayern</span>
+  <nav aria-label="Footer"><a href="https://www.linkedin.com/in/ralucajidvian">LinkedIn</a><a href="https://github.com/Dandelion1111r">GitHub</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></nav>
+</footer>
+</body>
+</html>
