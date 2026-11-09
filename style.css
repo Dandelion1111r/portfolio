@@ -120,3 +120,17 @@ footer nav a:hover { color: var(--plum); }
 .legal a:hover { color: var(--plum); text-decoration-color: var(--plum); }
 .back { display: inline-block; margin-bottom: 2.5rem; font-size: 0.9rem; }
 .stand { margin-top: 2.5rem; font-size: 0.85rem; }
+
+/* Fallstudie */
+.case h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); }
+.eyebrow { font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--plum); margin-bottom: 0.75rem; }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: 1rem 1.5rem; margin: 2.5rem 0; padding: 1.25rem 0; border-block: 1px solid var(--line); }
+.facts dt { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); }
+.facts dd { margin: 0.2rem 0 0; font-size: 0.95rem; }
+.numbers { display: grid; grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+.numbers strong { display: block; font: 600 2.4rem/1 var(--serif); color: var(--plum); }
+.numbers span { font-size: 0.85rem; color: var(--ink-soft); }
+.case figure { margin: 2rem 0; }
+.case img { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); display: block; }
+.case figcaption { margin-top: 0.6rem; font-size: 0.85rem; color: var(--ink-soft); }
+.todo { margin-top: 0.75rem; padding: 0.9rem 1rem; border: 1.5px dashed var(--plum); border-radius: 8px; color: var(--plum); font-size: 0.9rem; }
