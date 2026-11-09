@@ -30,7 +30,8 @@
   </div>
 
   <h2>Ausgangslage</h2>
-  <p class="todo">Raluca ergänzt: Was gab es vorher? Wie haben Kundinnen bestellt, und was war daran schwierig?</p>
+  <p>Angefangen hat Dandelion 11:11 auf Facebook und Instagram, später kamen ein TikTok Shop und eine Linktree-Seite dazu. Die Ballons kamen gut an, aber das Bestellen war mühsam: Absprachen liefen über Nachrichten, und für Interessierte war nicht klar sichtbar, <strong>wie</strong> sie eigentlich bestellen und bezahlen können.</p>
+  <p>Das Ziel war deshalb ein eigener Shop, in dem der Weg vom ersten Gedanken bis zur bezahlten Bestellung an einem Ort liegt und für jeden sofort verständlich ist.</p>
 
   <h2>Die Vorschau zeigt den Ballon schon beim Tippen, damit niemand blind bestellt</h2>
   <p>Ein personalisiertes Geschenk ist schwer vorstellbar. Deshalb steht links ein Ballon, der sich bei jeder Eingabe sofort verändert: Text, Schriftfarbe und -größe, Ballonfarbe, Symbol, Text-Effekt und Füllung. Wer möchte, lädt zusätzlich ein eigenes Bild oder Logo hoch.</p>
@@ -49,9 +50,12 @@
   <h2>Aufpreise stehen direkt an der Option, nicht erst im Warenkorb</h2>
   <p>Jeder Ballontyp zeigt seinen Aufpreis direkt in der Auswahl, zum Beispiel „Herz-Ballon (+3,00 €)“ oder „Bubble-Ballon (+9,00 €)“. Versandkosten und die Grenze für kostenlosen Versand sind klar benannt. So gibt es am Ende keine Überraschung.</p>
 
-  <h2>Zwei Wege zur Bestellung: PayPal oder ein persönliches Gespräch per WhatsApp</h2>
-  <p>Nicht jedes Geschenk passt in ein Formular. Wer sofort bestellen möchte, bezahlt im Warenkorb mit PayPal. Wer eine Sonderfarbe oder eine Frage hat, schickt die fertige Konfiguration mit einem Klick als WhatsApp-Nachricht.</p>
-  <p class="todo">Raluca ergänzt: Welcher Weg wird häufiger genutzt? Was fragen Kundinnen am häufigsten?</p>
+  <h2>Ein klarer Weg zum Bezahlen, WhatsApp nur noch als Alternative</h2>
+  <p>Anfangs gab es mehrere Bestellwege nebeneinander, auch eine Personalisierung per WhatsApp nach dem Kauf. Das sorgte für widersprüchliche Hinweise. Ich habe den Ablauf deshalb vereinfacht: Bezahlt wird direkt im Warenkorb über PayPal, auf Wunsch auch per Kreditkarte ohne PayPal-Konto. WhatsApp bleibt für Fragen und Sonderwünsche und danach nur noch für die Abstimmung des Liefertermins.</p>
+
+  <h2>Eine Bestellung ist erst fertig, wenn sie vollständig bei mir ankommt</h2>
+  <p>Hinter dem Shop steht eine kleine Bestellverwaltung mit Firebase. Jede Bestellung bekommt eine lesbare Nummer wie <strong>D-123456</strong>, Kundinnen sehen ihre Bestellungen unter „Meine Bestellungen“, und ich sehe alle Bestellungen in einer eigenen Admin-Ansicht.</p>
+  <p>Genau hier lag die größte Hürde: Die PayPal-Integration war schwierig, manche PayPal-Bestellungen wurden nicht gespeichert, Benachrichtigungen kamen nicht an, und nicht alle Felder aus dem Konfigurator landeten in der Bestellung. Für einen personalisierten Ballon fehlt dann genau das Wichtigste. Ich habe den Weg Schritt für Schritt nachverfolgt, bis jede Bestellung mit Text, Farben, Symbol, Füllung, Telefon und Lieferadresse vollständig ankam.</p>
 
   <h2>Eigene Seiten pro Anlass, damit man den Shop über Google findet</h2>
   <p>Menschen suchen nicht nach „Ballon“, sondern nach „Geschenk zur Einschulung“ oder „Ballon zur Hochzeit“. Deshalb gibt es eigene Seiten für Geburtstag, Hochzeit, Babyparty, Einschulung, Jugendweihe, JGA und Valentinstag, dazu ein Journal mit Geschichten aus dem Atelier.</p>
@@ -60,7 +64,11 @@
   <p>Den Code habe ich mit Unterstützung von Claude geschrieben. Die Entscheidungen, also was der Konfigurator zeigt, in welcher Reihenfolge und mit welchen Worten, habe ich getroffen, getestet und immer wieder angepasst.</p>
 
   <h2>Was ich gelernt habe</h2>
-  <p class="todo">Raluca ergänzt: Was würdest du heute anders machen? Was hat dich überrascht?</p>
+  <ul>
+    <li><strong>Den ganzen Weg testen, nicht nur den Bildschirm.</strong> Der Konfigurator sah früh fertig aus. Die eigentliche Arbeit steckte darin, dass die Daten auch vollständig dort ankommen, wo ich sie für die Fertigung brauche. Heute würde ich eine Testbestellung von Anfang an zum festen Teil jeder Änderung machen.</li>
+    <li><strong>Weniger Wege sind verständlicher.</strong> Jeder zusätzliche Bestellweg hat neue Fragen erzeugt. Erst mit einem klaren Hauptweg wurde der Shop wirklich einfach.</li>
+    <li><strong>Geschwindigkeit ist Teil der Nutzererfahrung.</strong> Die Bestellverwaltung lädt nur noch für mich als Inhaberin. Normale Besucherinnen sparen dadurch rund 200&nbsp;KB JavaScript, und die Seite ist schneller da.</li>
+  </ul>
 </main>
 <footer>
   <span>© 2026 Raluca Jidvian · Bayern</span>

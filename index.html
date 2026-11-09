@@ -19,7 +19,26 @@
   </ol>
 
   <p class="note">Die Seele steckt im Detail.</p>
-  <p class="status">Mein Portfolio entsteht gerade. Die ersten Fallstudien erscheinen hier in Kürze.</p>
+
+  <div class="actions">
+    <button class="btn" type="button" id="copyMail" data-mail="jidvian.raluca@yahoo.com">E-Mail kopieren</button>
+    <a class="btn ghost" href="mailto:jidvian.raluca@yahoo.com">E-Mail schreiben</a>
+  </div>
+
+  <h2 class="section-title">Projekte</h2>
+  <a class="project" href="dandelion.html">
+    <img src="img/dandelion-konfigurator.webp" alt="Konfigurator von Dandelion 11:11 mit Live-Vorschau eines personalisierten Ballons" width="1600" height="951" loading="lazy">
+    <div class="project-body">
+      <h3>Dandelion 11:11: Vom Konfigurator bis zur Bestellung, selbst gebaut</h3>
+      <div class="pair">
+        <p><b>Problem</b>Bestellungen liefen über Social Media und Nachrichten. Wie man bezahlt, war unklar.</p>
+        <p><b>Lösung</b>Ein eigener Shop mit Live-Vorschau, vier klaren Schritten und vollständig ankommenden Bestellungen.</p>
+      </div>
+      <div class="stats"><span><strong>4</strong>Schritte</span><span><strong>180+</strong>Seiten</span><span><strong>860+</strong>Iterationen</span></div>
+      <span class="more">Fallstudie lesen →</span>
+    </div>
+  </a>
+  <p class="status">Weitere Fallstudien folgen.</p>
 
   <nav aria-label="Links">
     <a href="https://www.linkedin.com/in/ralucajidvian">LinkedIn</a>
@@ -28,6 +47,14 @@
     <a href="https://www.dandelion1111.de">Dandelion 11:11</a>
   </nav>
 </main>
+<script>
+  document.getElementById("copyMail").addEventListener("click", async (e) => {
+    const b = e.currentTarget, mail = b.dataset.mail;
+    try { await navigator.clipboard.writeText(mail); b.textContent = "Kopiert ✓"; }
+    catch { location.href = "mailto:" + mail; return; }
+    setTimeout(() => (b.textContent = "E-Mail kopieren"), 2000);
+  });
+</script>
 <footer>
   <span>© 2026 Raluca Jidvian · Bayern</span>
   <nav aria-label="Rechtliches"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></nav>

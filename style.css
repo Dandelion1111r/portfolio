@@ -134,3 +134,23 @@ footer nav a:hover { color: var(--plum); }
 .case img { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); display: block; }
 .case figcaption { margin-top: 0.6rem; font-size: 0.85rem; color: var(--ink-soft); }
 .todo { margin-top: 0.75rem; padding: 0.9rem 1rem; border: 1.5px dashed var(--plum); border-radius: 8px; color: var(--plum); font-size: 0.9rem; }
+
+/* Startseite: Aktionen & Projekte */
+.actions { margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.btn { font: 500 0.95rem/1 var(--sans); padding: 0.8rem 1.2rem; border-radius: 999px; border: 1.5px solid var(--plum); background: var(--plum); color: var(--paper); cursor: pointer; text-decoration: none; }
+.btn.ghost { background: transparent; color: var(--plum); }
+.btn:hover { filter: brightness(1.08); }
+.btn:focus-visible { outline: 2px solid var(--plum); outline-offset: 3px; }
+.section-title { font: 500 1.9rem/1.2 var(--serif); margin: 4rem 0 1.25rem; }
+.project { display: block; color: inherit; text-decoration: none; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; transition: border-color .2s, transform .2s; }
+.project:hover { border-color: var(--plum); transform: translateY(-2px); }
+.project img { width: 100%; height: auto; display: block; border-bottom: 1px solid var(--line); }
+.project-body { padding: 1.25rem 1.4rem 1.5rem; }
+.project h3 { font: 600 1.6rem/1.2 var(--serif); }
+.project .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 0.9rem; font-size: 0.92rem; color: var(--ink-soft); }
+.project .pair b { display: block; font-weight: 500; color: var(--ink); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.project .stats { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; margin-top: 1rem; font-size: 0.85rem; color: var(--ink-soft); }
+.project .stats strong { color: var(--plum); font: 600 1.15rem var(--serif); margin-right: 0.25rem; }
+.project .more { display: inline-block; margin-top: 1rem; color: var(--plum); font-weight: 500; }
+@media (max-width: 560px) { .project .pair { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .project, .project:hover { transition: none; transform: none; } }
